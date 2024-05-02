@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CometFolio</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="mouse_wrap">
+      <div class="mouse_cursor"></div>
+      <div class="mouse_cursor2"></div>
+      <header id="header">
+        <h1>
+          <a href="/">Comet</a>
+        </h1>
+        <div class="year">2024</div>
+        <!-- 메뉴 -->
+        <div class="menu_toggle">
+          <div class="menu_line">
+            <span class="line1"></span>
+            <span class="line2"></span>
+          </div>
+        </div>
+        <!-- 메뉴화면 -->
+        <nav id="gnb">
+          <div class="my_info">
+            <ul>
+              <li>
+                <span
+                  ><i class="xi-emoticon-happy-o"></i> Name : Seong, Min</span
+                >
+              </li>
+              <li>
+                <span
+                  ><i class="xi-mobile"></i> Phone : +82 &#41;
+                  10-3270-2674</span
+                >
+              </li>
+              <li>
+                <span
+                  ><i class="xi-mail-o"></i>
+                  <a href="mailto:tjk0987@naver.com">
+                    email : tjk0987@naver.com</a
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><span>Main</span></li>
+              <li><span>Portfolio</span></li>
+              <li><span>About</span></li>
+              <li><span>Notion & Github</span></li>
+            </ul>
+          </div>
+          <div class="closeBox"></div>
+        </nav>
+      </header>
+      <!-- main -->
+      <main>
+        <section id="main_visual">
+          <video muted autoplay loop id="bg_video">
+            <source src="./image/video/bg.mp4" type="video/mp4" />
+          </video>
+          <div id="circle_line"></div>
+          <div id="main_text" class="main_text">
+            <p>
+              <span>I'm</span> comet <br /><span class="text_active"
+                >Web Publisher</span
+              ><br />&
+              <span class="text_active">Front end</span>
+            </p>
+          </div>
+        </section>
+        <!-- 포트폴리오 -->
+        <section id="portfolio">
+          <h3 id="portfolio_title">Portfolio</h3>
+          <div class="portfolio_con">
+            <div class="content">
+              <a href="https://catbell-project.vercel.app/" target="_blank">
+                <div class="content_image">
+                  <img src="./image/main.png" alt="catbell메인" />
+                </div>
+              </a>
+              <div class="content_text">
+                <h4>Cat bell 주유소</h4>
+                <p>
+                  한국도로교통공사 고속도로 공공 데이터를 이용한 주유소 찾기
+                  서비스입니다.<br />
+                  고속도로에 위치한 주유소 영업점 위치와 가격정보, 실시간
+                  교통상황을 확인하실 수 있습니다.
+                </p>
+                <p>• 개인 프로젝트 : 디자인 및 FE전반 담당</p>
+                <p>• 작업기간 : 2024.03.15 ~ 2024.03.22</p>
+                <p>
+                  • Github :
+                  <a
+                    href="https://github.com/plmnko237/catbellproject"
+                    target="_blank"
+                  >
+                    깃허브 바로가기↗</a
+                  >
+                </p>
+                <p>
+                  • Notion :
+                  <a
+                    href="https://zany-dish-c5c.notion.site/1-c62756ecb1b44500be60813f1cf1ab5c"
+                    target="_blank"
+                    >노션 바로가기↗</a
+                  >
+                </p>
+                <div class="skill">
+                  <span>• skill : </span>
+                  <div>Next.js</div>
+                  <div>Chart.js</div>
+                  <div>OPEN API</div>
+                  <div>CSS Animation</div>
+                  <div>Figma</div>
+                  <div>Vercel</div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <a href="https://bit-harbor.vercel.app/" target="_blank">
+                <div class="content_image">
+                  <img
+                    src="./image/bitharbor_main.png"
+                    alt="Bit Harbor메인"
+                  /></div
+              ></a>
+              <div class="content_text">
+                <h4>Bit Harbor</h4>
+                <p>
+                  개발자들이 자유롭게 소통할 수 있는 커뮤니티 사이트입니다.
+                  간편하게 사이트를 이용할 수 있도록 <br />UI를 Flat하게 구성
+                  하였습니다.
+                </p>
+                <p>• 팀 프로젝트 : FE 1명, BE 1명 / 디자인 및 FE전반 담당</p>
+                <p>• 작업기간 : 2023.11.15 ~ 2024.02.15</p>
+                <p>
+                  • Github :
+                  <a
+                    href="https://github.com/plmnko237/bit-harbor-new"
+                    target="_blank"
+                  >
+                    깃허브 바로가기↗</a
+                  >
+                </p>
+                <p>
+                  • Notion :
+                  <a
+                    href="https://zany-dish-c5c.notion.site/Bit-Harbor-15e62e89b9d94fda971cd02a9ff0a3ce"
+                    target="_blank"
+                    >노션 바로가기↗</a
+                  >
+                </p>
+                <div class="skill">
+                  <span>• skill : </span>
+                  <div>Next.js</div>
+                  <div style="background-color: royalblue">javascript</div>
+                  <div style="background-color: orange">RESTfullAPI</div>
+                  <div style="background-color: #58c058">Next Auth</div>
+                  <div>Figma</div>
+                  <div>Vercel</div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <a href="#">
+                <div class="content_image">
+                  <img src="./image/memeMaker.png" alt="memeMaker메인" /></div
+              ></a>
+              <div class="content_text">
+                <h4>MEME Maker</h4>
+                <p>
+                  (자바스크립트 스킬업 사이드 프로젝트 - 노마드코더 무료강의)<br />
+                  CANVAS를 이용한 그림판 & 밈 생성기입니다. 이미지를 꾸미고
+                  저장하고 텍스트를 입력할 수 있습니다.
+                </p>
+                <p>• 개인 사이드 프로젝트 : 디자인 및 FE전반 담당</p>
+                <p>• 작업기간 : 2024.04.02 ~ 2024.04.09</p>
+                <p>
+                  • Github :
+                  <a
+                    href="https://github.com/plmnko237/meme-maker"
+                    target="_blank"
+                  >
+                    깃허브 바로가기↗</a
+                  >
+                </p>
+                <div class="skill">
+                  <span>• skill : </span>
+                  <div style="background-color: purple; color: #fff">HTML5</div>
+                  <div style="background-color: #ebb031; color: #fff">CSS3</div>
+                  <div style="background-color: royalblue; color: #fff">
+                    javascript
+                  </div>
+                  <div style="background-color: tomato">canvas</div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <a href="http://www.nature-clinic.com/" target="_blank">
+                <div class="content_image">
+                  <img
+                    src="./image/nature-clinic.png"
+                    alt="자연담은한의원 메인"
+                  /></div
+              ></a>
+              <div class="content_text">
+                <h4>자연담은 한의원</h4>
+                <p>
+                  자연담은 한의원 홈페이지 입니다.<br />
+                  디자인 및 퍼블리싱, 반응형을 담당했습니다.
+                </p>
+                <p>
+                  • 프로젝트(에이전시) : 홈페이지 디자인 및 퍼블리싱, 유지보수
+                  전반
+                </p>
+                <p>• 작업기간 : 2017.07 ~ 2017.08</p>
+                <p>• 기여도 : 100%</p>
+                <div class="skill">
+                  <span>• skill : </span>
+                  <div style="background-color: purple; color: #fff">HTML5</div>
+                  <div style="background-color: #ebb031; color: #fff">CSS3</div>
+                  <div style="background-color: royalblue; color: #fff">
+                    javascript
+                  </div>
+                  <div style="background-color: lightseagreen; color: #fff">
+                    jQuery
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <a href="http://parkgong.com/" target="_blank">
+                <div class="content_image">
+                  <img src="./image/parkgong.png" alt="박공헤어 메인" /></div
+              ></a>
+              <div class="content_text">
+                <h4>박공헤어</h4>
+                <p>
+                  박공헤어 홈페이지 입니다.<br />
+                  shop페이지 디자인, 퍼블리싱 일부를 담당했습니다.
+                </p>
+                <p>
+                  • 프로젝트(에이전시) : shop페이지의 컨텐츠 디자인, 상세페이지
+                  디자인 및 퍼블리싱, 유지보수
+                </p>
+                <p>• 작업기간 : 2017.06 ~ 2017.07</p>
+                <p>• 기여도 : 30%</p>
+                <div class="skill">
+                  <span>• skill : </span>
+                  <div style="background-color: purple; color: #fff">HTML5</div>
+                  <div style="background-color: #ebb031; color: #fff">CSS3</div>
+                  <div style="background-color: royalblue; color: #fff">
+                    javascript
+                  </div>
+                  <div style="background-color: lightseagreen; color: #fff">
+                    jQuery
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <a href="http://www.chonyou.com/" target="_blank">
+                <div class="content_image">
+                  <img
+                    src="./image/chonyou.png"
+                    alt="초앤유여성병원메인"
+                  /></div
+              ></a>
+              <div class="content_text">
+                <h4>초앤유 여성병원</h4>
+                <p>
+                  초앤유 여성병원 홈페이지 입니다.<br />
+                  디자인 및 퍼블리싱, 반응형을 담당했습니다.
+                </p>
+                <p>
+                  • 프로젝트(에이전시) : 홈페이지 디자인 및 퍼블리싱, 유지보수
+                  전반
+                </p>
+                <p>• 작업기간 : 2017.05 ~ 2017.06</p>
+                <p>• 기여도 : 100%</p>
+                <div class="skill">
+                  <span>• skill : </span>
+                  <div style="background-color: purple; color: #fff">HTML5</div>
+                  <div style="background-color: #ebb031; color: #fff">CSS3</div>
+                  <div style="background-color: royalblue; color: #fff">
+                    javascript
+                  </div>
+                  <div style="background-color: lightseagreen; color: #fff">
+                    jQuery
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <a href="https://artrie.com/m/" target="_blank">
+                <div class="content_image">
+                  <img
+                    src="./image/artrie-m.png"
+                    alt="아트리에 모바일 메인"
+                  /></div
+              ></a>
+              <div class="content_text">
+                <h4>ArtRIE Mobile</h4>
+                <p>
+                  미술품 전시 및 판매 전문 아트리에 모바일 페이지 입니다.<br />
+                  디자인 및 퍼블리싱, 반응형을 담당했습니다.
+                </p>
+                <p>
+                  • 프로젝트(에이전시) : 모바일 페이지 디자인 및 퍼블리싱,
+                  유지보수 전반
+                </p>
+                <p>• 작업기간 : 2017.04 ~ 2017.05</p>
+                <p>• 기여도 : 100%</p>
+                <div class="skill">
+                  <span>• skill : </span>
+                  <div style="background-color: purple; color: #fff">HTML5</div>
+                  <div style="background-color: #ebb031; color: #fff">CSS3</div>
+                  <div style="background-color: royalblue; color: #fff">
+                    javascript
+                  </div>
+                  <div style="background-color: lightseagreen; color: #fff">
+                    jQuery
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="about">
+          <h3 id="about_title">About</h3>
+          <div class="my_intro">
+            <div class="profile">
+              <img src="./image/front-end.jpg" alt="프로필사진" />
+            </div>
+            <div class="intro">
+              <div class="profile_text">
+                안녕하세요! 웹 퍼블리셔 민혜성입니다.<br />
+                웹 표준과 웹 접근성을 준수하여 마크업하며, 웹 퍼블리싱과
+                디자인툴을 능숙하게 다룹니다.<br />
+                HTML5/ CSS3/ javascript/ jQuery/ BootStrap/ Photoshop/
+                Illustrator/ Figma/ 등<br />다양한 툴을 사용하여 사용자의 입장을
+                고려한 UIUX를 설계합니다.<br />팀원들과의 의견 공유와 배려를
+                매우 중요하게 생각하여 즐겁고 효율적인 협업을 할 수 있습니다.
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="notion_git">
+          <h3 id="notion_git_title">Notion & Github</h3>
+          <div class="rolling1">
+            <span>welcome to comet world!</span>
+            <span>welcome to comet world!</span>
+            <span>welcome to comet world!</span>
+            <span>welcome to comet world!</span>
+          </div>
+          <div class="rolling2">
+            <span>welcome to comet world!</span>
+            <span>welcome to comet world!</span>
+            <span>welcome to comet world!</span>
+            <span>welcome to comet world!</span>
+          </div>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer>
+        <h3>© 2024. Min-hyeseong All Rights Reserved.</h3>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

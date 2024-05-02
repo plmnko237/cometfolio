@@ -1,0 +1,323 @@
+/* 컨텐츠영역 */
+main {
+  width: 100%;
+  height: fit-content;
+}
+main section {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+section h3 {
+  font-size: 40px;
+  position: relative;
+  margin-top: 100px;
+  opacity: 0;
+  transition: all 1.8s ease;
+}
+section h3.visible {
+  margin-top: 0;
+  opacity: 1;
+}
+/* 메인비주얼 */
+#main_visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 8vw;
+  color: #fff;
+  font-family: "DM Serif Display", serif;
+  position: relative;
+  overflow: hidden;
+}
+#bg_video {
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  z-index: 11;
+  width: 100%;
+}
+.main_text {
+  position: absolute;
+  z-index: 22;
+  text-align: center;
+}
+.main_text span {
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: transparent;
+  transition: -webkit-text-fill-color 0.3s;
+}
+.text_active:hover {
+  -webkit-text-fill-color: #fff;
+}
+#circle_line {
+  width: 40%;
+  height: 45%;
+  border: 3px dotted #ddd;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 30;
+  border-radius: 100%;
+  animation: circle 4s linear 0s infinite alternate;
+  animation-direction: alternate;
+}
+
+@keyframes circle {
+  from {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -o-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(70deg) rotateY(360deg);
+    -o-transform: rotateX(70deg) rotateY(360deg);
+    -moz-transform: rotateX(70deg) rotateY(360deg);
+  }
+}
+/* 포트폴리오 */
+#portfolio {
+  background-color: #040014;
+  padding: 10vh 10vw;
+  position: relative;
+  overflow: hidden;
+}
+#portfolio_title {
+  font-size: 40px;
+  color: #fff;
+}
+.portfolio_con {
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  margin-top: 50px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-columns: 300px;
+  justify-content: space-evenly;
+  gap: 40px;
+  row-gap: 100px;
+}
+.portfolio_con::before {
+  content: "line";
+  font-size: 0;
+  position: absolute;
+  display: block;
+  top: 20vh;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  border: 50px solid #11eea4;
+  border-radius: 100%;
+  border-left: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  transform: rotate(45deg);
+  animation: blink 1.5s linear 0s infinite alternate;
+}
+.portfolio_con::after {
+  content: "line";
+  font-size: 0;
+  position: absolute;
+  display: block;
+  top: 63vh;
+  right: -73px;
+  width: 40px;
+  height: 40px;
+  border: 40px solid #ab61ff;
+  border-right: 50px solid transparent;
+  border-top: 50px solid transparent;
+  transform: rotate(45deg);
+  animation: blink 1.5s linear 1s infinite alternate;
+}
+@keyframes blink {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+.portfolio_con .content {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  top: 0;
+  transition: all 0.3s;
+}
+.portfolio_con .content:hover {
+  top: -5px;
+}
+.content_image {
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  border-radius: 20px;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+.content_image:hover {
+  opacity: 1;
+}
+.content_image > img {
+  width: 100%;
+  max-width: 100%;
+}
+.content_text {
+  color: #fff;
+  margin-top: 40px;
+  padding: 0 10px;
+  font-weight: 300;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.content_text h4 {
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.content_text p {
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+.content_text p:first-of-type {
+  font-weight: 300;
+  width: 100%;
+  height: 64px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  border-bottom: 1px solid #666;
+}
+.content_text p a {
+  color: #fff;
+  transition: 0.3s;
+}
+.content_text p a:hover {
+  color: #11eea4;
+}
+.skill {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.skill div {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 0.8;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+.skill div:first-of-type {
+  background-color: #fff;
+  color: #000;
+}
+.skill div:nth-of-type(2) {
+  background-color: #e94e4e;
+}
+.skill div:nth-of-type(3) {
+  background-color: #4e7fe9;
+}
+.skill div:nth-of-type(4) {
+  background-color: #ebb031;
+}
+.skill div:nth-of-type(5) {
+  background-color: #eb319e;
+}
+.skill div:nth-of-type(6) {
+  background-color: #eb6631;
+}
+/* about */
+#about {
+  background-color: #ebe7c1;
+  padding: 10vh 10vw;
+  color: #df9f17;
+}
+#about h3 {
+  font-size: 40px;
+  color: #df9f17;
+}
+.my_intro {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 50;
+}
+.profile {
+  width: 500px;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.profile > img {
+  max-width: 100%;
+  transform: translateX(80px);
+}
+.profile_text {
+  width: 100%;
+  color: #000;
+}
+/* notion_git */
+#notion_git {
+  background-color: #000000;
+  padding: 10vh 10vw;
+  color: #fff;
+  overflow: hidden;
+}
+#notion_git h3 {
+  font-size: 40px;
+  color: #fff;
+}
+.rolling1 {
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  font-size: 142px;
+  opacity: 0.3;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  margin-left: -1920px;
+  font-family: "Montserrat", sans-serif;
+}
+.rolling1 span {
+  width: 100vw;
+  animation: rolling1 8s linear 0s infinite running;
+}
+.rolling2 {
+  position: absolute;
+  top: 60vh;
+  left: 0;
+  font-size: 142px;
+  opacity: 0.3;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  margin-left: -1920px;
+  font-family: "Montserrat", sans-serif;
+}
+.rolling2 span {
+  width: 100vw;
+  animation: rolling2 8s linear 0s infinite running;
+}
+@keyframes rolling1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes rolling2 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
