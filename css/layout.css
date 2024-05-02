@@ -265,6 +265,7 @@ section h3.visible {
 }
 .my_intro {
   width: 100%;
+  height: 630px;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -272,6 +273,31 @@ section h3.visible {
   position: relative;
   top: -350px;
   z-index: 50;
+}
+.my_intro > div:first-of-type {
+  padding-right: 50px;
+  overflow: auto;
+}
+.my_intro > div::-webkit-scrollbar {
+  width: 10px;
+}
+.my_intro > div::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+.my_intro > div::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+.my_intro > div::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* 코너에 라운드 효과 */
+.my_intro > div::-webkit-scrollbar-track,
+.my_intro > div::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+.my_intro h4 {
+  margin: 20px 0;
 }
 .obj1 {
   animation: moving1 1.5s ease 1s infinite alternate running;
@@ -307,8 +333,12 @@ section h3.visible {
     transform: scale(2) translateX(400px) translateY(220px);
   }
 }
+.skills {
+  width: 100%;
+  height: fit-content;
+}
 .about_text {
-  font-size: 4.3vw;
+  font-size: 3.2vw;
   line-height: 1.2;
   font-weight: 800;
   color: #fff;
@@ -317,6 +347,7 @@ section h3.visible {
   background-clip: text;
   -webkit-background-clip: text;
   background-size: 0;
+  margin-bottom: 6px;
 }
 .about_text:hover {
   color: transparent;
@@ -325,7 +356,22 @@ section h3.visible {
 .about_text span {
   font-size: 16px;
 }
-
+.bar_box {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.bar {
+  width: 0;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ee6fc4 0%, #4e7fe9 80%);
+  transition: width 0.5s;
+}
 /* notion_git */
 #notion_git {
   background-color: #000000;
@@ -352,6 +398,11 @@ section h3.visible {
 .rolling1 span {
   width: 100vw;
   animation: rolling1 8s linear 0s infinite running;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+.rolling1 span span {
+  -webkit-text-stroke: 2px #11eea4;
 }
 .rolling2 {
   position: absolute;
@@ -368,6 +419,9 @@ section h3.visible {
 .rolling2 span {
   width: 100vw;
   animation: rolling2 8s linear 0s infinite running;
+}
+.rolling2 span span {
+  color: #4e7fe9;
 }
 @keyframes rolling1 {
   from {

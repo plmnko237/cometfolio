@@ -106,3 +106,22 @@ function handleSectionVisibility() {
 }
 
 window.addEventListener("scroll", handleSectionVisibility);
+
+//skills 모션
+const skills = document.querySelectorAll(".skills");
+
+skills.forEach((skill) => {
+  const barBox = skill.querySelector(".bar_box");
+  const bar = skill.querySelector(".bar");
+  const width = parseInt(skill.dataset.width);
+
+  skill.addEventListener("mouseover", () => {
+    barBox.style.opacity = "1";
+    bar.style.width = width + "%"; // 바의 너비를 조정하여 확대 효과를 부여합니다.
+  });
+
+  skill.addEventListener("mouseout", () => {
+    barBox.style.opacity = "0";
+    bar.style.width = "0"; // 바의 너비를 초기화하여 사라지는 효과를 부여합니다.
+  });
+});
