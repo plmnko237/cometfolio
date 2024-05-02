@@ -13,6 +13,7 @@ section h3 {
   font-size: 40px;
   position: relative;
   margin-top: 100px;
+  font-weight: 100;
   opacity: 0;
   transition: all 1.8s ease;
 }
@@ -138,6 +139,24 @@ section h3.visible {
     opacity: 0.8;
   }
 }
+.portfolio_con::-webkit-scrollbar {
+  width: 10px;
+}
+.portfolio_con::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.portfolio_con::-webkit-scrollbar-thumb {
+  background: linear-gradient(#e66465, #9198e5);
+}
+.portfolio_con::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* 코너에 라운드 효과 */
+.portfolio_con::-webkit-scrollbar-track,
+.portfolio_con::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
 .portfolio_con .content {
   position: relative;
   width: fit-content;
@@ -162,6 +181,10 @@ section h3.visible {
 .content_image > img {
   width: 100%;
   max-width: 100%;
+  transition: 0.3s;
+}
+.content_image:hover > img {
+  transform: scale(1.02);
 }
 .content_text {
   color: #fff;
@@ -231,37 +254,78 @@ section h3.visible {
 }
 /* about */
 #about {
-  background-color: #ebe7c1;
+  background: url(../image/space.jpg) 100% 100% no-repeat;
   padding: 10vh 10vw;
-  color: #df9f17;
+  color: white;
+  overflow: hidden;
 }
 #about h3 {
   font-size: 40px;
-  color: #df9f17;
+  color: white;
 }
 .my_intro {
   width: 100%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  gap: 40px;
   position: relative;
+  top: -350px;
   z-index: 50;
 }
-.profile {
-  width: 500px;
-  height: fit-content;
-  overflow: hidden;
-  border-radius: 20px;
-  background-color: #fff;
+.obj1 {
+  animation: moving1 1.5s ease 1s infinite alternate running;
 }
-.profile > img {
-  max-width: 100%;
-  transform: translateX(80px);
+.obj2 {
+  animation: moving2 1.5s ease 0s infinite alternate running;
 }
-.profile_text {
-  width: 100%;
-  color: #000;
+.obj3 {
+  filter: blur(7px);
+  animation: moving3 1.5s ease 0.5s infinite alternate running;
 }
+@keyframes moving1 {
+  from {
+    transform: translateX(-250px) translateY(200px);
+  }
+  to {
+    transform: translateX(-250px) translateY(220px);
+  }
+}
+@keyframes moving2 {
+  from {
+    transform: scale(0.3) translateX(3500px) translateY(0px);
+  }
+  to {
+    transform: scale(0.3) translateX(3500px) translateY(20px);
+  }
+}
+@keyframes moving3 {
+  from {
+    transform: scale(2) translateX(400px) translateY(200px);
+  }
+  to {
+    transform: scale(2) translateX(400px) translateY(220px);
+  }
+}
+.about_text {
+  font-size: 4.3vw;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #fff;
+  transition: 1s;
+  background: linear-gradient(90deg, #ee6fc4 0%, #4e7fe9 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 0;
+}
+.about_text:hover {
+  color: transparent;
+  background-size: 100%;
+}
+.about_text span {
+  font-size: 16px;
+}
+
 /* notion_git */
 #notion_git {
   background-color: #000000;

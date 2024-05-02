@@ -80,52 +80,29 @@ menuItems.forEach((menuItem, i) => {
   });
 });
 
-//각 section
-const portfolioSection = document.getElementById("portfolio");
-const aboutSection = document.getElementById("about");
-const notionGitSection = document.getElementById("notion_git");
-//section안의 h3
-const portfolioTitle = document.getElementById("portfolio_title");
-const aboutTitle = document.getElementById("about_title");
-const notionGitTitle = document.getElementById("notion_git_title");
+const mainInSections = [
+  { id: "portfolio", titleId: "portfolio_title" },
+  { id: "about", titleId: "about_title" },
+  { id: "notion_git", titleId: "notion_git_title" },
+];
 
-//스크롤이 움직이면 해당 section에서 인터렉션 효과
-window.addEventListener("scroll", () => {
-  const portfolioRect = portfolioSection.getBoundingClientRect();
-  const aboutRect = aboutSection.getBoundingClientRect();
-  const notionGitRect = notionGitSection.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
+function handleSectionVisibility() {
+  mainInSections.forEach(({ id, titleId }) => {
+    const section = document.getElementById(id);
+    const title = document.getElementById(titleId);
+    const rect = section.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-  // portfolio 섹션이 화면에 부분적으로 보일 때도 h3 요소를 나타냄
-  if (
-    portfolioRect.bottom >= 0 &&
-    portfolioRect.top <= windowHeight &&
-    !portfolioTitle.classList.contains("visible")
-  ) {
-    portfolioTitle.classList.add("visible");
-  } else if (portfolioRect.top > windowHeight || portfolioRect.bottom < 0) {
-    portfolioTitle.classList.remove("visible");
-  }
+    if (
+      rect.bottom >= 0 &&
+      rect.top <= windowHeight &&
+      !title.classList.contains("visible")
+    ) {
+      title.classList.add("visible");
+    } else if (rect.top > windowHeight || rect.bottom < 0) {
+      title.classList.remove("visible");
+    }
+  });
+}
 
-  // about 섹션이 화면에 부분적으로 보일 때도 h3 요소를 나타냄
-  if (
-    aboutRect.bottom >= 0 &&
-    aboutRect.top <= windowHeight &&
-    !aboutTitle.classList.contains("visible")
-  ) {
-    aboutTitle.classList.add("visible");
-  } else if (aboutRect.top > windowHeight || aboutRect.bottom < 0) {
-    aboutTitle.classList.remove("visible");
-  }
-
-  // notion_git 섹션이 화면에 부분적으로 보일 때도 h3 요소를 나타냄
-  if (
-    notionGitRect.bottom >= 0 &&
-    notionGitRect.top <= windowHeight &&
-    !notionGitTitle.classList.contains("visible")
-  ) {
-    notionGitTitle.classList.add("visible");
-  } else if (notionGitRect.top > windowHeight || notionGitRect.bottom < 0) {
-    notionGitTitle.classList.remove("visible");
-  }
-});
+window.addEventListener("scroll", handleSectionVisibility);
