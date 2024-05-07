@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* 컨텐츠영역 */
 main {
   width: 100%;
@@ -8,6 +9,7 @@ main section {
   height: 100vh;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 section h3 {
   font-size: 40px;
@@ -38,6 +40,9 @@ section h3.visible {
   top: -20px;
   z-index: 11;
   width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transform: scale(1.12);
 }
 .main_text {
   position: absolute;
@@ -254,28 +259,29 @@ section h3.visible {
 }
 /* about */
 #about {
+  width: 100%;
   background: url(../image/space.jpg) 100% 100% no-repeat;
   padding: 10vh 10vw;
   color: white;
-  overflow: hidden;
 }
 #about h3 {
   font-size: 40px;
   color: white;
 }
-.my_intro {
-  width: 100%;
-  height: 630px;
-  margin-top: 50px;
+#about .my_intro {
+  width: 85%;
+  height: 70%;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  position: relative;
-  top: -350px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 50;
 }
 .my_intro > div:first-of-type {
-  padding-right: 50px;
   overflow: auto;
 }
 .my_intro > div::-webkit-scrollbar {
@@ -290,7 +296,6 @@ section h3.visible {
 .my_intro > div::-webkit-scrollbar-button {
   display: none;
 }
-
 /* 코너에 라운드 효과 */
 .my_intro > div::-webkit-scrollbar-track,
 .my_intro > div::-webkit-scrollbar-thumb {
@@ -385,11 +390,12 @@ section h3.visible {
   border-radius: 20px;
   backdrop-filter: blur(100px);
   border: 1px solid #333;
+  padding: 40px;
 }
 .me > div {
-  width: 250px;
-  height: 250px;
-  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  border-radius: 500px;
   overflow: hidden;
 }
 .me > div img {
@@ -416,8 +422,9 @@ section h3.visible {
   height: 600px;
   margin: 0 auto;
   backdrop-filter: blur(4px);
-  top: 65%;
-  transform: translateY(-65%);
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-70%);
   box-sizing: border-box;
   border: 1px solid #2c2c2c;
   border-radius: 20px;
