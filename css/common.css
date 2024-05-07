@@ -111,7 +111,6 @@ h1 {
 #gnb {
   width: 0;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -122,9 +121,10 @@ h1 {
   font-weight: 200;
   transition: all 0.3s;
   z-index: 500;
+  backdrop-filter: blur(3px);
 }
 #gnb > div {
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #5c5c5c;
   padding: 3vw;
   font-size: 20px;
 }
